@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "html_press"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{API and Rack middleware lib for HTML compression with caching support.}
+    gem.description = %Q{This middleware aims to compress the crap out of your HTML on-the-fly. It squeezes out every last kilobyte of traffic for your users. In some cases it can save ~50kb per request which may amount to 5 seconds of wait for a dial up user somewhere in the world. To prevent re-compressing on every request it uses checksum-based caching mechnism easily swappable for any key-value store. Among unique awesome features HTMLPress is smart enough to ignore rails authenticity tokens when it caches HTML. This avoids constant re-compressing on form pages.}
     gem.email = "max@bitsonnet.com"
     gem.homepage = "http://github.com/maxim/html_press"
     gem.authors = ["Maxim Chernyak"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency "hpricot", ">=0.8"
+    gem.add_development_dependency "shoulda", ">= 0"
+    gem.files.include %w(lib/*/**)
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

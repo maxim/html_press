@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'open-uri'
+
+# $LOAD_PATH.unshift(File.join(File.dirname(File.dirname(__FILE__)), ''))
+require "html_press/runner"
+
+unless ARGV[0]
+  puts "Error: Please provide path or url to html.\n\n"
+  exit(0)
+end
+
+runner = HTMLPress::Runner.new(open(ARGV[0]).read)
+runner.run_with_benchmarks!

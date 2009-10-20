@@ -38,7 +38,7 @@ module HTMLPress
     end
   
     def compressed_html
-      result = @dom.to_html
+      result = @dom.to_original_html
       if original_html.size > result.size
         result
       else
@@ -60,7 +60,7 @@ module HTMLPress
   
     def cleanup_style_attributes!
       @dom.search("//*[@style]").each do |elem| 
-        elem.raw_attributes = elem.attributes.merge("style" => cleanup(elem.attributes["style"]))
+        elem.set_attribute("style", cleanup(elem.attributes["style"]))
       end
     end
   

@@ -30,7 +30,7 @@ module HTMLPress
       else
         @cache_hit = false
         @result_html = HTMLPress.new(html.identifiable_html).compress
-        @store[@html_checksum] = @result_html
+        Thread.new { @store[@html_checksum] = @result_html }
       end
     end
     

@@ -1,1 +1,3 @@
-== Rack::HTMLPress
+=Rack::HTMLPress
+
+This middleware aims to compress the crap out of your HTML on-the-fly. It squeezes out every last kilobyte of traffic for your users. In some cases it can save ~50kb per request which may amount to 5 seconds of wait for a dial up user somewhere in the world. To prevent re-compressing on every request it uses checksum-based caching mechnism easily swappable for any key-value store. Among unique awesome features HTMLPress is smart enough to ignore rails authenticity tokens when it caches HTML. This avoids constant re-compressing on form pages.

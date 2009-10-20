@@ -38,7 +38,7 @@ module HTMLPress
     end
   
     def compressed_html
-      result = @dom.to_original_html
+      result = @dom.to_html
       if original_html.size > result.size
         result
       else

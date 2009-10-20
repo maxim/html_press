@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{html_press}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Maxim Chernyak"]
@@ -25,12 +25,21 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/hpress",
+     "html_press.gemspec",
+     "init.rb",
      "lib/html_press.rb",
      "lib/html_press/html_press.rb",
+     "lib/html_press/html_press.rb",
+     "lib/html_press/identity_parser.rb",
      "lib/html_press/identity_parser.rb",
      "lib/html_press/rack.rb",
+     "lib/html_press/rack.rb",
+     "lib/html_press/runner.rb",
      "lib/html_press/runner.rb",
      "lib/html_press/store.rb",
+     "lib/html_press/store.rb",
+     "tasks/hpress.rake",
      "test/helper.rb",
      "test/test_html_press.rb"
   ]
@@ -38,7 +47,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{API and Rack middleware lib for HTML compression with caching support.}
+  s.summary = %q{API and Rack middleware for HTML compression with caching support.}
   s.test_files = [
     "test/helper.rb",
      "test/test_html_press.rb"

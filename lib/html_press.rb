@@ -19,7 +19,7 @@ module Rack
     end
   
     def new(*args, &blk)
-      HTMLPress::Rack.new(*args, &blk)
+      ::HTMLPress::Rack.new(*args, &blk)
     end
   end
 end

@@ -9,11 +9,11 @@ module Rack
       options.each_pair do |key, val|
         key = key.to_sym
         case key
-        when :secret_string: HTMLPress::IdentityParser.secret_string = val
-        when :benchmark: HTMLPress::Rack.benchmark = val
-        when :store: HTMLPress::Runner.store = val
-        when :cache_dir: HTMLPress::Store.path = val
-        when :compression: HTMLPress::HTMLPress.options = val
+        when :secret_string:  ::HTMLPress::IdentityParser.secret_string = val
+        when :benchmark:      ::HTMLPress::Rack.benchmark = val
+        when :store:          ::HTMLPress::Runner.store = val
+        when :cache_dir:      ::HTMLPress::Store.path = val
+        when :compression:    ::HTMLPress::HTMLPress.options = val
         end
       end
     end
